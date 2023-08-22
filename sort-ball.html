@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)https://sumx.ir/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>sort-ball</title><link href="./sort-ball_files/app.2473955e.css" rel="preload" as="style"><link href="./sort-ball_files/chunk-vendors.021487e4.css" rel="preload" as="style"><link href="./sort-ball_files/app.233803b7.js.download" rel="preload" as="script"><link href="./sort-ball_files/chunk-vendors.f892622d.js.download" rel="preload" as="script"><link href="./sort-ball_files/chunk-vendors.021487e4.css" rel="stylesheet"><link href="./sort-ball_files/app.2473955e.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://sumx.ir/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://sumx.ir/img/icons/favicon-16x16.png"><link rel="manifest" href="https://sumx.ir/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="sort ball puzzle online game"><link rel="apple-touch-icon" href="https://sumx.ir/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="https://sumx.ir/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><link href="https://www.googletagmanager.com/" rel="preconnect"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M5X517M4K2&amp;l=dataLayer" charset="utf-8"></script><style type="text/css" id="vuetify-theme-stylesheet">:root {
+  --v-anchor-base: #ee44aa;
+  --v-primary-base: #ee44aa;
+  --v-primary-lighten5: #ffd9ff;
+  --v-primary-lighten4: #ffbcff;
+  --v-primary-lighten3: #ff9efe;
+  --v-primary-lighten2: #ff81e1;
+  --v-primary-lighten1: #ff63c5;
+  --v-primary-darken1: #d01d8f;
+  --v-primary-darken2: #b20076;
+  --v-primary-darken3: #94005d;
+  --v-primary-darken4: #770045;
+  --v-secondary-base: #424242;
+  --v-secondary-lighten5: #c1c1c1;
+  --v-secondary-lighten4: #a6a6a6;
+  --v-secondary-lighten3: #8b8b8b;
+  --v-secondary-lighten2: #727272;
+  --v-secondary-lighten1: #595959;
+  --v-secondary-darken1: #2c2c2c;
+  --v-secondary-darken2: #171717;
+  --v-secondary-darken3: #000000;
+  --v-secondary-darken4: #000000;
+  --v-accent-base: #82b1ff;
+  --v-accent-lighten5: #ffffff;
+  --v-accent-lighten4: #f8ffff;
+  --v-accent-lighten3: #daffff;
+  --v-accent-lighten2: #bce8ff;
+  --v-accent-lighten1: #9fccff;
+  --v-accent-darken1: #6596e2;
+  --v-accent-darken2: #467dc6;
+  --v-accent-darken3: #2364aa;
+  --v-accent-darken4: #004c90;
+  --v-error-base: #ff5252;
+  --v-error-lighten5: #ffe4d5;
+  --v-error-lighten4: #ffc6b9;
+  --v-error-lighten3: #ffa99e;
+  --v-error-lighten2: #ff8c84;
+  --v-error-lighten1: #ff6f6a;
+  --v-error-darken1: #df323b;
+  --v-error-darken2: #bf0025;
+  --v-error-darken3: #9f0010;
+  --v-error-darken4: #800000;
+  --v-info-base: #2196f3;
+  --v-info-lighten5: #d4ffff;
+  --v-info-lighten4: #b5ffff;
+  --v-info-lighten3: #95e8ff;
+  --v-info-lighten2: #75ccff;
+  --v-info-lighten1: #51b0ff;
+  --v-info-darken1: #007cd6;
+  --v-info-darken2: #0064ba;
+  --v-info-darken3: #004d9f;
+  --v-info-darken4: #003784;
+  --v-success-base: #4caf50;
+  --v-success-lighten5: #dcffd6;
+  --v-success-lighten4: #beffba;
+  --v-success-lighten3: #a2ff9e;
+  --v-success-lighten2: #85e783;
+  --v-success-lighten1: #69cb69;
+  --v-success-darken1: #2d9437;
+  --v-success-darken2: #00791e;
+  --v-success-darken3: #006000;
+  --v-success-darken4: #004700;
+  --v-warning-base: #ffc107;
+  --v-warning-lighten5: #ffffae;
+  --v-warning-lighten4: #ffff91;
+  --v-warning-lighten3: #ffff74;
+  --v-warning-lighten2: #fff956;
+  --v-warning-lighten1: #ffdd37;
+  --v-warning-darken1: #e0a600;
+  --v-warning-darken2: #c18c00;
+  --v-warning-darken3: #a27300;
+  --v-warning-darken4: #855a00;
+}
+
+.v-application a { color: var(--v-anchor-base); }
+.v-application .primary {
+  background-color: var(--v-primary-base) !important;
+  border-color: var(--v-primary-base) !important;
+}
+.v-application .primary--text {
+  color: var(--v-primary-base) !important;
+  caret-color: var(--v-primary-base) !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: var(--v-primary-lighten5) !important;
+  border-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: var(--v-primary-lighten5) !important;
+  caret-color: var(--v-primary-lighten5) !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: var(--v-primary-lighten4) !important;
+  border-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: var(--v-primary-lighten4) !important;
+  caret-color: var(--v-primary-lighten4) !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: var(--v-primary-lighten3) !important;
+  border-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: var(--v-primary-lighten3) !important;
+  caret-color: var(--v-primary-lighten3) !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: var(--v-primary-lighten2) !important;
+  border-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: var(--v-primary-lighten2) !important;
+  caret-color: var(--v-primary-lighten2) !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: var(--v-primary-lighten1) !important;
+  border-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: var(--v-primary-lighten1) !important;
+  caret-color: var(--v-primary-lighten1) !important;
+}
+.v-application .primary.darken-1 {
+  background-color: var(--v-primary-darken1) !important;
+  border-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: var(--v-primary-darken1) !important;
+  caret-color: var(--v-primary-darken1) !important;
+}
+.v-application .primary.darken-2 {
+  background-color: var(--v-primary-darken2) !important;
+  border-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: var(--v-primary-darken2) !important;
+  caret-color: var(--v-primary-darken2) !important;
+}
+.v-application .primary.darken-3 {
+  background-color: var(--v-primary-darken3) !important;
+  border-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: var(--v-primary-darken3) !important;
+  caret-color: var(--v-primary-darken3) !important;
+}
+.v-application .primary.darken-4 {
+  background-color: var(--v-primary-darken4) !important;
+  border-color: var(--v-primary-darken4) !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: var(--v-primary-darken4) !important;
+  caret-color: var(--v-primary-darken4) !important;
+}
+.v-application .secondary {
+  background-color: var(--v-secondary-base) !important;
+  border-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary--text {
+  color: var(--v-secondary-base) !important;
+  caret-color: var(--v-secondary-base) !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: var(--v-secondary-lighten5) !important;
+  border-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: var(--v-secondary-lighten5) !important;
+  caret-color: var(--v-secondary-lighten5) !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: var(--v-secondary-lighten4) !important;
+  border-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: var(--v-secondary-lighten4) !important;
+  caret-color: var(--v-secondary-lighten4) !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: var(--v-secondary-lighten3) !important;
+  border-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: var(--v-secondary-lighten3) !important;
+  caret-color: var(--v-secondary-lighten3) !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: var(--v-secondary-lighten2) !important;
+  border-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: var(--v-secondary-lighten2) !important;
+  caret-color: var(--v-secondary-lighten2) !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: var(--v-secondary-lighten1) !important;
+  border-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: var(--v-secondary-lighten1) !important;
+  caret-color: var(--v-secondary-lighten1) !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: var(--v-secondary-darken1) !important;
+  border-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: var(--v-secondary-darken1) !important;
+  caret-color: var(--v-secondary-darken1) !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: var(--v-secondary-darken2) !important;
+  border-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: var(--v-secondary-darken2) !important;
+  caret-color: var(--v-secondary-darken2) !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: var(--v-secondary-darken3) !important;
+  border-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: var(--v-secondary-darken3) !important;
+  caret-color: var(--v-secondary-darken3) !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: var(--v-secondary-darken4) !important;
+  border-color: var(--v-secondary-darken4) !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: var(--v-secondary-darken4) !important;
+  caret-color: var(--v-secondary-darken4) !important;
+}
+.v-application .accent {
+  background-color: var(--v-accent-base) !important;
+  border-color: var(--v-accent-base) !important;
+}
+.v-application .accent--text {
+  color: var(--v-accent-base) !important;
+  caret-color: var(--v-accent-base) !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: var(--v-accent-lighten5) !important;
+  border-color: var(--v-accent-lighten5) !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: var(--v-accent-lighten5) !important;
+  caret-color: var(--v-accent-lighten5) !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: var(--v-accent-lighten4) !important;
+  border-color: var(--v-accent-lighten4) !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: var(--v-accent-lighten4) !important;
+  caret-color: var(--v-accent-lighten4) !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: var(--v-accent-lighten3) !important;
+  border-color: var(--v-accent-lighten3) !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: var(--v-accent-lighten3) !important;
+  caret-color: var(--v-accent-lighten3) !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: var(--v-accent-lighten2) !important;
+  border-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: var(--v-accent-lighten2) !important;
+  caret-color: var(--v-accent-lighten2) !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: var(--v-accent-lighten1) !important;
+  border-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: var(--v-accent-lighten1) !important;
+  caret-color: var(--v-accent-lighten1) !important;
+}
+.v-application .accent.darken-1 {
+  background-color: var(--v-accent-darken1) !important;
+  border-color: var(--v-accent-darken1) !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: var(--v-accent-darken1) !important;
+  caret-color: var(--v-accent-darken1) !important;
+}
+.v-application .accent.darken-2 {
+  background-color: var(--v-accent-darken2) !important;
+  border-color: var(--v-accent-darken2) !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: var(--v-accent-darken2) !important;
+  caret-color: var(--v-accent-darken2) !important;
+}
+.v-application .accent.darken-3 {
+  background-color: var(--v-accent-darken3) !important;
+  border-color: var(--v-accent-darken3) !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: var(--v-accent-darken3) !important;
+  caret-color: var(--v-accent-darken3) !important;
+}
+.v-application .accent.darken-4 {
+  background-color: var(--v-accent-darken4) !important;
+  border-color: var(--v-accent-darken4) !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: var(--v-accent-darken4) !important;
+  caret-color: var(--v-accent-darken4) !important;
+}
+.v-application .error {
+  background-color: var(--v-error-base) !important;
+  border-color: var(--v-error-base) !important;
+}
+.v-application .error--text {
+  color: var(--v-error-base) !important;
+  caret-color: var(--v-error-base) !important;
+}
+.v-application .error.lighten-5 {
+  background-color: var(--v-error-lighten5) !important;
+  border-color: var(--v-error-lighten5) !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: var(--v-error-lighten5) !important;
+  caret-color: var(--v-error-lighten5) !important;
+}
+.v-application .error.lighten-4 {
+  background-color: var(--v-error-lighten4) !important;
+  border-color: var(--v-error-lighten4) !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: var(--v-error-lighten4) !important;
+  caret-color: var(--v-error-lighten4) !important;
+}
+.v-application .error.lighten-3 {
+  background-color: var(--v-error-lighten3) !important;
+  border-color: var(--v-error-lighten3) !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: var(--v-error-lighten3) !important;
+  caret-color: var(--v-error-lighten3) !important;
+}
+.v-application .error.lighten-2 {
+  background-color: var(--v-error-lighten2) !important;
+  border-color: var(--v-error-lighten2) !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: var(--v-error-lighten2) !important;
+  caret-color: var(--v-error-lighten2) !important;
+}
+.v-application .error.lighten-1 {
+  background-color: var(--v-error-lighten1) !important;
+  border-color: var(--v-error-lighten1) !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: var(--v-error-lighten1) !important;
+  caret-color: var(--v-error-lighten1) !important;
+}
+.v-application .error.darken-1 {
+  background-color: var(--v-error-darken1) !important;
+  border-color: var(--v-error-darken1) !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: var(--v-error-darken1) !important;
+  caret-color: var(--v-error-darken1) !important;
+}
+.v-application .error.darken-2 {
+  background-color: var(--v-error-darken2) !important;
+  border-color: var(--v-error-darken2) !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: var(--v-error-darken2) !important;
+  caret-color: var(--v-error-darken2) !important;
+}
+.v-application .error.darken-3 {
+  background-color: var(--v-error-darken3) !important;
+  border-color: var(--v-error-darken3) !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: var(--v-error-darken3) !important;
+  caret-color: var(--v-error-darken3) !important;
+}
+.v-application .error.darken-4 {
+  background-color: var(--v-error-darken4) !important;
+  border-color: var(--v-error-darken4) !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: var(--v-error-darken4) !important;
+  caret-color: var(--v-error-darken4) !important;
+}
+.v-application .info {
+  background-color: var(--v-info-base) !important;
+  border-color: var(--v-info-base) !important;
+}
+.v-application .info--text {
+  color: var(--v-info-base) !important;
+  caret-color: var(--v-info-base) !important;
+}
+.v-application .info.lighten-5 {
+  background-color: var(--v-info-lighten5) !important;
+  border-color: var(--v-info-lighten5) !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: var(--v-info-lighten5) !important;
+  caret-color: var(--v-info-lighten5) !important;
+}
+.v-application .info.lighten-4 {
+  background-color: var(--v-info-lighten4) !important;
+  border-color: var(--v-info-lighten4) !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: var(--v-info-lighten4) !important;
+  caret-color: var(--v-info-lighten4) !important;
+}
+.v-application .info.lighten-3 {
+  background-color: var(--v-info-lighten3) !important;
+  border-color: var(--v-info-lighten3) !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: var(--v-info-lighten3) !important;
+  caret-color: var(--v-info-lighten3) !important;
+}
+.v-application .info.lighten-2 {
+  background-color: var(--v-info-lighten2) !important;
+  border-color: var(--v-info-lighten2) !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: var(--v-info-lighten2) !important;
+  caret-color: var(--v-info-lighten2) !important;
+}
+.v-application .info.lighten-1 {
+  background-color: var(--v-info-lighten1) !important;
+  border-color: var(--v-info-lighten1) !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: var(--v-info-lighten1) !important;
+  caret-color: var(--v-info-lighten1) !important;
+}
+.v-application .info.darken-1 {
+  background-color: var(--v-info-darken1) !important;
+  border-color: var(--v-info-darken1) !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: var(--v-info-darken1) !important;
+  caret-color: var(--v-info-darken1) !important;
+}
+.v-application .info.darken-2 {
+  background-color: var(--v-info-darken2) !important;
+  border-color: var(--v-info-darken2) !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: var(--v-info-darken2) !important;
+  caret-color: var(--v-info-darken2) !important;
+}
+.v-application .info.darken-3 {
+  background-color: var(--v-info-darken3) !important;
+  border-color: var(--v-info-darken3) !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: var(--v-info-darken3) !important;
+  caret-color: var(--v-info-darken3) !important;
+}
+.v-application .info.darken-4 {
+  background-color: var(--v-info-darken4) !important;
+  border-color: var(--v-info-darken4) !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: var(--v-info-darken4) !important;
+  caret-color: var(--v-info-darken4) !important;
+}
+.v-application .success {
+  background-color: var(--v-success-base) !important;
+  border-color: var(--v-success-base) !important;
+}
+.v-application .success--text {
+  color: var(--v-success-base) !important;
+  caret-color: var(--v-success-base) !important;
+}
+.v-application .success.lighten-5 {
+  background-color: var(--v-success-lighten5) !important;
+  border-color: var(--v-success-lighten5) !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: var(--v-success-lighten5) !important;
+  caret-color: var(--v-success-lighten5) !important;
+}
+.v-application .success.lighten-4 {
+  background-color: var(--v-success-lighten4) !important;
+  border-color: var(--v-success-lighten4) !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: var(--v-success-lighten4) !important;
+  caret-color: var(--v-success-lighten4) !important;
+}
+.v-application .success.lighten-3 {
+  background-color: var(--v-success-lighten3) !important;
+  border-color: var(--v-success-lighten3) !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: var(--v-success-lighten3) !important;
+  caret-color: var(--v-success-lighten3) !important;
+}
+.v-application .success.lighten-2 {
+  background-color: var(--v-success-lighten2) !important;
+  border-color: var(--v-success-lighten2) !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: var(--v-success-lighten2) !important;
+  caret-color: var(--v-success-lighten2) !important;
+}
+.v-application .success.lighten-1 {
+  background-color: var(--v-success-lighten1) !important;
+  border-color: var(--v-success-lighten1) !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: var(--v-success-lighten1) !important;
+  caret-color: var(--v-success-lighten1) !important;
+}
+.v-application .success.darken-1 {
+  background-color: var(--v-success-darken1) !important;
+  border-color: var(--v-success-darken1) !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: var(--v-success-darken1) !important;
+  caret-color: var(--v-success-darken1) !important;
+}
+.v-application .success.darken-2 {
+  background-color: var(--v-success-darken2) !important;
+  border-color: var(--v-success-darken2) !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: var(--v-success-darken2) !important;
+  caret-color: var(--v-success-darken2) !important;
+}
+.v-application .success.darken-3 {
+  background-color: var(--v-success-darken3) !important;
+  border-color: var(--v-success-darken3) !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: var(--v-success-darken3) !important;
+  caret-color: var(--v-success-darken3) !important;
+}
+.v-application .success.darken-4 {
+  background-color: var(--v-success-darken4) !important;
+  border-color: var(--v-success-darken4) !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: var(--v-success-darken4) !important;
+  caret-color: var(--v-success-darken4) !important;
+}
+.v-application .warning {
+  background-color: var(--v-warning-base) !important;
+  border-color: var(--v-warning-base) !important;
+}
+.v-application .warning--text {
+  color: var(--v-warning-base) !important;
+  caret-color: var(--v-warning-base) !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: var(--v-warning-lighten5) !important;
+  border-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: var(--v-warning-lighten5) !important;
+  caret-color: var(--v-warning-lighten5) !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: var(--v-warning-lighten4) !important;
+  border-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: var(--v-warning-lighten4) !important;
+  caret-color: var(--v-warning-lighten4) !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: var(--v-warning-lighten3) !important;
+  border-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: var(--v-warning-lighten3) !important;
+  caret-color: var(--v-warning-lighten3) !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: var(--v-warning-lighten2) !important;
+  border-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: var(--v-warning-lighten2) !important;
+  caret-color: var(--v-warning-lighten2) !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: var(--v-warning-lighten1) !important;
+  border-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: var(--v-warning-lighten1) !important;
+  caret-color: var(--v-warning-lighten1) !important;
+}
+.v-application .warning.darken-1 {
+  background-color: var(--v-warning-darken1) !important;
+  border-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: var(--v-warning-darken1) !important;
+  caret-color: var(--v-warning-darken1) !important;
+}
+.v-application .warning.darken-2 {
+  background-color: var(--v-warning-darken2) !important;
+  border-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: var(--v-warning-darken2) !important;
+  caret-color: var(--v-warning-darken2) !important;
+}
+.v-application .warning.darken-3 {
+  background-color: var(--v-warning-darken3) !important;
+  border-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: var(--v-warning-darken3) !important;
+  caret-color: var(--v-warning-darken3) !important;
+}
+.v-application .warning.darken-4 {
+  background-color: var(--v-warning-darken4) !important;
+  border-color: var(--v-warning-darken4) !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: var(--v-warning-darken4) !important;
+  caret-color: var(--v-warning-darken4) !important;
+}</style></head><body><noscript><strong>We're sorry but sort-ball doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div data-v-4a0d586d="" data-app="true" class="v-application v-application--is-ltr theme--light" id="app"><div class="v-application--wrap"><header data-v-4a0d586d="" class="px-3 px-md-6 v-sheet theme--light v-toolbar v-toolbar--flat v-app-bar v-app-bar--fixed" data-booted="true" style="height: 64px; margin-top: 0px; transform: translateY(0px); left: 256px; right: 0px; background-color: rgba(255, 255, 255, 0); border-color: rgba(255, 255, 255, 0);"><div class="v-toolbar__content" style="height: 64px;"><button data-v-4a0d586d="" type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button><div data-v-4a0d586d="" class="spacer"></div></div></header><main data-v-4a0d586d="" class="v-main" data-booted="true" style="padding: 64px 0px 36px 256px;"><div class="v-main__wrap"><nav data-v-4a0d586d="" class="v-navigation-drawer v-navigation-drawer--fixed v-navigation-drawer--open theme--light" data-booted="true" style="height: 100vh; top: 0px; max-height: calc(100% - 36px); transform: translateX(0%); width: 256px;"><div class="v-navigation-drawer__content"><div data-v-4a0d586d="" class="v-list v-sheet theme--light"><div data-v-4a0d586d="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-restart theme--light"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> Restart </div></div><div data-v-4a0d586d="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-new-box theme--light"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> New Game </div></div><div data-v-4a0d586d="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-import theme--light"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> Import Board </div></div><div data-v-4a0d586d="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-export theme--light"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> Export Board </div></div><div data-v-4a0d586d="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-help-circle theme--light"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> Help </div></div><div data-v-4a0d586d="" tabindex="-1" class="v-list-item theme--light"><div data-v-4a0d586d="" class="v-list-item__icon"><i data-v-4a0d586d="" aria-hidden="true" class="v-icon notranslate mdi mdi-weather-night theme--light black--text"></i></div><div data-v-4a0d586d="" class="v-list-item__content"> Dark Mode </div><div data-v-4a0d586d="" class="v-list-item__action"><div data-v-4a0d586d="" class="v-input theme--light v-input--selection-controls v-input--switch v-input--switch--inset"><div class="v-input__control"><div class="v-input__slot"><div class="v-input--selection-controls__input"><input aria-checked="false" id="input-23" role="switch" type="checkbox" aria-disabled="false" value="false"><div class="v-input--selection-controls__ripple"></div><div class="v-input--switch__track theme--light"></div><div class="v-input--switch__thumb theme--light"><!----></div></div></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav><div data-v-b7c451c8="" data-v-4a0d586d="" class="container fill-height align-start"><div data-v-b7c451c8="" class="row pl-3"><div data-v-b7c451c8="" class="text-left secondary--text col col-12"><span data-v-b7c451c8="">‌Best Move Record: 73</span></div><div data-v-b7c451c8="" class="text-left secondary--text col col-12"><span data-v-b7c451c8="">Moves: 0</span></div></div><div data-v-b7c451c8="" class="row my-auto"><div data-v-b7c451c8="" class="col"><ul data-v-b7c451c8="" class="pl-0"><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto black"></div><div data-v-525f2256="" class="ball mt-1 mx-auto orange"></div><div data-v-525f2256="" class="ball mt-1 mx-auto black"></div><div data-v-525f2256="" class="ball mt-1 mx-auto purple"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto blue lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto yellow"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto pink lighten-3"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto purple"></div><div data-v-525f2256="" class="ball mt-1 mx-auto brown"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto orange"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto yellow"></div><div data-v-525f2256="" class="ball mt-1 mx-auto blue lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto black"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto yellow"></div><div data-v-525f2256="" class="ball mt-1 mx-auto blue darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto pink lighten-3"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green darken-4"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto red"></div><div data-v-525f2256="" class="ball mt-1 mx-auto yellow"></div><div data-v-525f2256="" class="ball mt-1 mx-auto blue darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green lighten-2"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto purple"></div><div data-v-525f2256="" class="ball mt-1 mx-auto grey"></div><div data-v-525f2256="" class="ball mt-1 mx-auto black"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green darken-4"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto red"></div><div data-v-525f2256="" class="ball mt-1 mx-auto pink lighten-3"></div><div data-v-525f2256="" class="ball mt-1 mx-auto grey"></div><div data-v-525f2256="" class="ball mt-1 mx-auto blue lighten-2"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto blue lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto grey"></div><div data-v-525f2256="" class="ball mt-1 mx-auto brown"></div><div data-v-525f2256="" class="ball mt-1 mx-auto grey"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto blue darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto purple"></div><div data-v-525f2256="" class="ball mt-1 mx-auto pink lighten-3"></div><div data-v-525f2256="" class="ball mt-1 mx-auto orange"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto green lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto red"></div><div data-v-525f2256="" class="ball mt-1 mx-auto green lighten-2"></div><div data-v-525f2256="" class="ball mt-1 mx-auto orange"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"><div data-v-525f2256="" class="ball mt-1 mx-auto blue darken-4"></div><div data-v-525f2256="" class="ball mt-1 mx-auto red"></div><div data-v-525f2256="" class="ball mt-1 mx-auto brown"></div><div data-v-525f2256="" class="ball mt-1 mx-auto brown"></div></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"></div></div></li><li data-v-b7c451c8="" class="mb-9 d-inline-flex align-center justify-center"><div data-v-b7c451c8="" class="ball-column-container fill-height"><div class="mx-auto d-flex align-center justify-end flex-column pt-3 ball-column"></div></div></li></ul></div></div><div data-v-b7c451c8="" role="dialog" class="v-dialog__container"><!----></div><div data-v-b7c451c8="" role="dialog" class="v-dialog__container"><!----></div><div data-v-b7c451c8="" role="dialog" class="v-dialog__container"></div><button data-v-b7c451c8="" type="button" disabled="disabled" class="v-btn v-btn--bottom v-btn--contained v-btn--disabled v-btn--fab v-btn--fixed v-btn--right v-btn--round theme--light v-size--default"><span class="v-btn__content"><i data-v-b7c451c8="" aria-hidden="true" class="v-icon notranslate mdi mdi-undo theme--light"></i></span></button><div data-v-b7c451c8="" class="v-snack v-snack--bottom v-snack--has-background" style="padding-bottom: 36px; padding-top: 64px;"><div class="v-snack__wrapper v-sheet theme--dark success" style="display: none;"><div role="status" aria-live="polite" class="v-snack__content">
+    Board Generated
+  </div><div class="v-snack__action "></div></div></div></div></div></main><footer data-v-4a0d586d="" class="v-footer v-sheet theme--light v-footer--fixed" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;">Completed Games: 1 </footer><div data-v-4a0d586d="" role="dialog" class="v-dialog__container"><!----></div></div><div role="document" data-v-b7c451c8="" class="v-dialog__content" style="z-index: 202;"><div class="v-dialog" style="transform-origin: center center; display: none;"><div data-v-b7c451c8="" class="v-card v-sheet theme--light"><div data-v-b7c451c8="" class="v-card__title"> Import Board </div><div data-v-b7c451c8="" class="v-card__text"><div data-v-b7c451c8="" class="v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted"><div class="v-input__control"><div class="v-input__slot"><div class="v-text-field__slot"><input id="input-103" type="text"></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div><button data-v-b7c451c8="" type="button" class="v-btn v-btn--contained theme--light v-size--default"><span class="v-btn__content">import</span></button></div></div></div></div></div><script src="./sort-ball_files/chunk-vendors.f892622d.js.download"></script><script src="./sort-ball_files/app.233803b7.js.download"></script></body></html>
