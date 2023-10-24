@@ -1,4 +1,5 @@
 import numpy as np
+import itertools
 
 class Pile():
   def __init__(self, pile):
@@ -6,6 +7,7 @@ class Pile():
     self.num_of_empty = (pile == " ").sum()
 
   def get_top(self):
+    
     return self.pile[self.num_of_empty]
 
   def is_full(self):
@@ -25,6 +27,22 @@ class Pile():
       return
     self.pile[self.num_of_empty] = " "
     self.num_of_empty += 1
+  
+  def get_score(self):
+    if self.is_empty():
+      return -1
+    if self.num_of_empty == 3:
+      return 4
+    if self.is_full():
+      if len(set(self.pile)) == 1:
+        return -1
+      if len(set(self.pile)) == 4:
+        return 0
+    if len([sum( 1 for _ in group ) for key, group in itertools.groupby(self.pile)]) == 2:
+      return 3
+    return 2
+
+    
 
 class State():
   def __init__(self, state, action=None):
@@ -98,7 +116,7 @@ class Piles():
             if not self.piles[j].is_empty() and self.piles[i].get_top() != self.piles[j].get_top():
               continue
             actions.append((i,j))
-    return actions
+    return sorted(actions)
 
   def perform_action(self, action):
     if action==None:
